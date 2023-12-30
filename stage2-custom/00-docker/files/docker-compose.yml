@@ -13,7 +13,7 @@ services:
       - WG_PERSISTENT_KEEPALIVE=25
       - WG_DEFAULT_ADDRESS=192.168.2.x
       - WG_DEFAULT_DNS=10.8.1.3
-      - WG_ALLOWED_IPS=192.168.1.0/24
+      - WG_ALLOWED_IPS=0.0.0.0/0, ::/0, 192.168.1.0/24
     volumes:
       - /docker/appdata/wireguard_config:/etc/wireguard
     ports:
@@ -51,7 +51,6 @@ services:
       - "53:53/tcp"
       - "53:53/udp"
       - "${PIHOLE_PORT}:80/tcp"
-    dns: 127.0.0.1
     networks:
       pi-network:
         ipv4_address: 10.8.1.3
