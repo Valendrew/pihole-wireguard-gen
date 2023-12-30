@@ -1,0 +1,4 @@
+.env
+!.env.example
+config
+stage2-custom/00-docker/files/docker.gpg

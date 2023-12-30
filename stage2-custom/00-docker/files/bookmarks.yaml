@@ -1,0 +1,18 @@
+---
+- Pi-Hole:
+    - Pi-Hole:
+        - abbr: PH
+          href: https://github.com/pi-hole/docker-pi-hole
+
+- WG-Easy:
+    - Wireguard:
+        - abbr: WG
+          href: https://github.com/wg-easy/wg-easy
+
+- Homepage:
+    - HomePage:
+        - abbr: HP
+          href: https://github.com/gethomepage/homepage
+    - Docs:
+        - abbr: DC
+          href: https://gethomepage.dev/latest/configs/bookmarks/
