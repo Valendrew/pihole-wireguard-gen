@@ -1,3 +1,4 @@
+#!/bin/bash -e
 cd pi-gen
 
 # SKIP_IMAGES for the stage2
@@ -11,9 +12,7 @@ touch stage2/SKIP_IMAGES
 echo "Build image"
 CONFIG_FILE="../config"
 source $CONFIG_FILE
-export SSH_PORT
-sudo ./build.sh -c $CONFIG_FILE
-
+sudo SSH_PORT=$SSH_PORT ./build.sh -c $CONFIG_FILE
 rm stage2/SKIP_IMAGES
 
 echo "Successfully created the image"

@@ -151,7 +151,7 @@ Flash the image to an SD card using a tool such as [Raspberry Pi Imager](https:/
   - Port forward the `DEVICE_IP` in your router to access Wireguard for an external network.
 - RaspberryPi configuration
   - You will be prompted to configure the keyboard layout, user and password on first boot.
-  - Edit the SSH port by running `sudo nano /etc/ssh/sshd_config` and changing the line `#Port 22` to `Port SSH_PORT`.
+  - ~~Edit the SSH port by running `sudo nano /etc/ssh/sshd_config` and changing the line `#Port 22` to `Port SSH_PORT`.~~
 - Create the containers
   - Run `docker compose up -d` in `~/project/docker` to create the containers.
   - Generate the API key for Pi-hole at `Pi-hole WEB UI -> Settings -> API -> Show API token` and set it in the `.env` file.
@@ -160,7 +160,7 @@ Flash the image to an SD card using a tool such as [Raspberry Pi Imager](https:/
 <!-- ROADMAP -->
 ## TODO
 
-- [ ] Edit SSH port directly in `stage2-custom` instead of post setup
+- [x] Edit SSH port directly in `stage2-custom` instead of post setup
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
