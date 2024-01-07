@@ -24,6 +24,7 @@ EOF
 DOCKER_FOLDER="${ROOTFS_DIR}/home/${FIRST_USER_NAME}/projects/docker"
 install -v -m 0755 -o 1000 -g 1000 -d "${DOCKER_FOLDER}"
 install -v -m 0644 -o 1000 -g 1000 "files/docker-compose.yml" "${DOCKER_FOLDER}/"
+install -v -m 0644 -o 1000 -g 1000 "files/update-containers.sh" "${DOCKER_FOLDER}/"
 install -v -m 0644 -o 1000 -g 1000 "files/.env" "${DOCKER_FOLDER}/"
 
 
@@ -31,6 +32,7 @@ APPDATA_FOLDER="/docker/appdata"
 install -v -m 0755 -o 1000 -g 1000 -d "${ROOTFS_DIR}${APPDATA_FOLDER}"
 
 on_chroot <<EOF
+chown -R $FIRST_USER_NAME:$FIRST_USER_NAME $(dirname $DOCKER_FOLDER)
 chown -R $FIRST_USER_NAME:$FIRST_USER_NAME $(dirname $APPDATA_FOLDER)
 chmod -R a=,a+rX,u+w,g+w $(dirname $APPDATA_FOLDER)
 EOF

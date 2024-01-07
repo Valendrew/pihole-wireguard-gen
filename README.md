@@ -157,6 +157,8 @@ Flash the image to an SD card using a tool such as [Raspberry Pi Imager](https:/
   - Generate the API key for Pi-hole at `Pi-hole WEB UI -> Settings -> API -> Show API token` and set it in the `.env` file.
   - Restart the containers by running `docker compose restart` in `~/project/docker` to apply the changes.
 
+Access at the homepage at `http://DEVICE_IP:HOMEPAGE_PORT`, from where you can access the Pi-hole and Wireguard WEB UIs.
+
 <!-- ROADMAP -->
 ## TODO
 
